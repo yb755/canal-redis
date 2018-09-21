@@ -27,12 +27,10 @@ public class ClientSample {
 			int totalEmptyCount = 1200;
 			while (emptyCount < totalEmptyCount) {
 				Message message = connector.getWithoutAck(batchSize); // 获取指定数量的数据
-				System.out.println(message);
 				long batchId = message.getId();
 				int size = message.getEntries().size();
 				if (batchId == -1 || size == 0) {
 					emptyCount++;
-					System.out.println("empty count : " + emptyCount);
 					try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
