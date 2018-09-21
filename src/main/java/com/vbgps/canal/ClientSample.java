@@ -65,7 +65,7 @@ public class ClientSample {
 			}
 
 			EventType eventType = rowChage.getEventType();
-			System.out.println(String.format("================&gt; binlog[%s:%s] , name[%s,%s] , eventType : %s", entry.getHeader().getLogfileName(), entry.getHeader().getLogfileOffset(), entry
+			System.out.println(String.format("================ binlog[%s:%s] , name[%s,%s] , eventType : %s", entry.getHeader().getLogfileName(), entry.getHeader().getLogfileOffset(), entry
 					.getHeader().getSchemaName(), entry.getHeader().getTableName(), eventType));
 
 			for (RowData rowData : rowChage.getRowDatasList()) {
