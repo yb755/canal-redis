@@ -74,9 +74,9 @@ public class ClientSample {
 				} else if (eventType == EventType.INSERT) {
 					printColumn(rowData.getAfterColumnsList());
 				} else {
-					System.out.println("-------&gt; before");
+					System.out.println("------- BEFORE -------");
 					printColumn(rowData.getBeforeColumnsList());
-					System.out.println("-------&gt; after");
+					System.out.println("------- AFTER -------");
 					printColumn(rowData.getAfterColumnsList());
 				}
 			}
